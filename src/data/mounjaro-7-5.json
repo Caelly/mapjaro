@@ -1,18 +1,10 @@
 [
   {
-    "name": "Pharmacie du Progrès2",
-    "address": "41 Route de Vienne",
-    "postal_code": "69007",
-    "city": "Lyon",
-    "price": 300,
-    "last_update": "20/05/2025"
-  },
-  {
-    "name": "Pharmacie Centrale2",
-    "address": "12 rue de la République",
-    "postal_code": "75001",
-    "city": "Paris",
-    "price": 90,
-    "last_update": "19/05/2025"
+    "name": "Pharmacie des Sables",
+    "address": "47 Route de Briennon",
+    "postal_code": "42300",
+    "city": "Mably",
+    "price": 600,
+    "last_update": "22/05/2025"
   }
 ]

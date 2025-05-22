@@ -33,15 +33,20 @@ watch(
   { immediate: true },
 )
 
-// Filtrage par département
+// Filtrage et tri par département + prix croissant
 const filteredItems = computed(() => {
-  if (!props.department) return rawItems.value
-  return rawItems.value.filter((pharmacy) => pharmacy.postal_code?.startsWith(props.department))
+  let result = rawItems.value
+
+  if (props.department) {
+    result = result.filter((pharmacy) => pharmacy.postal_code?.startsWith(props.department))
+  }
+
+  return [...result].sort((a, b) => a.price - b.price)
 })
 </script>
 
 <template>
-  <div class="mt-6">
+  <div class="my-6">
     <p class="text-lg font-medium text-gray-800 mb-3">Résultats ({{ filteredItems.length }})</p>
 
     <div v-if="isLoading" class="text-gray-500">Chargement…</div>
@@ -69,11 +74,7 @@ const filteredItems = computed(() => {
           </tr>
         </thead>
         <tbody class="bg-white divide-y divide-gray-200">
-          <tr
-            v-for="(pharmacy, index) in filteredItems"
-            :key="index"
-            :class="index < 2 ? 'bg-emerald-50' : ''"
-          >
+          <tr v-for="(pharmacy, index) in filteredItems" :key="index">
             <td class="px-4 py-4">
               <div class="font-medium text-gray-900">{{ pharmacy.name }}</div>
               <div class="text-sm text-gray-500">MàJ : {{ pharmacy.last_update }}</div>

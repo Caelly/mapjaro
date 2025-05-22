@@ -4,47 +4,41 @@
     "address": "41 Route de Vienne",
     "postal_code": "69007",
     "city": "Lyon",
-    "price": 300,
-    "last_update": "20/05/2025"
+    "price": 275,
+    "last_update": "22/05/2025"
   },
   {
-    "name": "Pharmacie Centrale",
-    "address": "12 rue de la République",
-    "postal_code": "75001",
-    "city": "Paris",
-    "price": 90,
-    "last_update": "19/05/2025"
-  },
-  {
-    "name": "Pharmacie du Progrès",
-    "address": "41 Route de Vienne",
-    "postal_code": "69007",
+    "name": "Grande Pharmacie du Parc",
+    "address": "46 Rue Tête d'Or",
+    "postal_code": "69006",
     "city": "Lyon",
-    "price": 300,
-    "last_update": "20/05/2025"
+    "price": 310,
+    "last_update": "22/05/2025"
+  },
+
+  {
+    "name": "Pharmacie Vitton",
+    "address": "2 Cr Vitton",
+    "postal_code": "69006",
+    "city": "Lyon",
+    "price": 415,
+    "last_update": "22/05/2025"
   },
   {
-    "name": "Pharmacie du Progrès",
-    "address": "41 Route de Vienne",
-    "postal_code": "69007",
+    "name": "Grande Pharmacie de La Part-Dieu",
+    "address": "10-12 Bd Marius Vivier Merle",
+    "postal_code": "69003",
     "city": "Lyon",
-    "price": 300,
-    "last_update": "20/05/2025"
+    "price": 268,
+    "last_update": "22/05/2025"
   },
+
   {
-    "name": "Pharmacie du Progrès",
-    "address": "41 Route de Vienne",
-    "postal_code": "69007",
-    "city": "Lyon",
-    "price": 300,
-    "last_update": "20/05/2025"
-  },
-  {
-    "name": "Pharmacie du Progrès",
-    "address": "41 Route de Vienne",
-    "postal_code": "69007",
-    "city": "Lyon",
-    "price": 300,
-    "last_update": "20/05/2025"
+    "name": "Pharmacie des Sables",
+    "address": "47 Route de Briennon",
+    "postal_code": "42300",
+    "city": "Mably",
+    "price": 350,
+    "last_update": "22/05/2025"
   }
 ]
