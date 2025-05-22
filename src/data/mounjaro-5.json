@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Pharmacie du Progrès",
+    "address": "41 Route de Vienne",
+    "postal_code": "69007",
+    "city": "Lyon",
+    "price": 300,
+    "last_update": "20/05/2025"
+  },
+  {
+    "name": "Pharmacie Centrale",
+    "address": "12 rue de la République",
+    "postal_code": "75001",
+    "city": "Paris",
+    "price": 90,
+    "last_update": "19/05/2025"
+  },
+  {
+    "name": "Pharmacie du Progrès",
+    "address": "41 Route de Vienne",
+    "postal_code": "69007",
+    "city": "Lyon",
+    "price": 300,
+    "last_update": "20/05/2025"
+  },
+  {
+    "name": "Pharmacie du Progrès",
+    "address": "41 Route de Vienne",
+    "postal_code": "69007",
+    "city": "Lyon",
+    "price": 300,
+    "last_update": "20/05/2025"
+  },
+  {
+    "name": "Pharmacie du Progrès",
+    "address": "41 Route de Vienne",
+    "postal_code": "69007",
+    "city": "Lyon",
+    "price": 300,
+    "last_update": "20/05/2025"
+  },
+  {
+    "name": "Pharmacie du Progrès",
+    "address": "41 Route de Vienne",
+    "postal_code": "69007",
+    "city": "Lyon",
+    "price": 300,
+    "last_update": "20/05/2025"
+  }
+]

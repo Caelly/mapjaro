@@ -1,11 +1,18 @@
+<template>
+  <div class="p-4">
+    <SelectMeasure @update:formattedDose="handleDose" />
+    <InfoTable v-if="selectedDose" :dose="selectedDose" />
+  </div>
+</template>
+
 <script setup>
-import Footer from './components/Footer.vue'
-import Header from './components/Header.vue'
+import { ref } from 'vue'
 import SelectMeasure from './components/search/SelectMeasure.vue'
 import InfoTable from './components/InfoTable.vue'
-import SearchLocation from './components/search/SearchLocation.vue'
+
+const selectedDose = ref('')
+
+function handleDose(dose) {
+  selectedDose.value = dose // ex: "2-5"
+}
 </script>
-
-<template></template>
-
-<style scoped></style>

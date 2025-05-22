@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-md">
+  <div class="max-w-lg">
     <div class="relative">
       <input
         v-model="query"

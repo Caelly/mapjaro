@@ -1,11 +1,39 @@
+<script setup>
+import { ref, computed, watch } from 'vue'
+
+const selectedDose = ref('2,5 mg')
+const doses = ['2,5 mg', '5 mg', '7,5 mg']
+
+const formattedDose = computed(() => {
+  return selectedDose.value.replace(',', '-').replace(' mg', '')
+})
+
+watch(formattedDose, (newVal) => {
+  // Émet l’événement au parent
+  emit('update:formattedDose', newVal)
+})
+
+const emit = defineEmits(['update:formattedDose'])
+
+function selectDose(dose) {
+  selectedDose.value = dose
+}
+</script>
+
 <template>
-  <select
-    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-  >
-    <option selected>Choisir un dosage</option>
-    <option value="2-5">2.5mg</option>
-    <option value="5">5mg</option>
-    <option value="7-5">7.5mg</option>
-    <option disabled>Autres dosages à venir</option>
-  </select>
+  <div class="flex gap-2">
+    <button
+      v-for="dose in doses"
+      :key="dose"
+      @click="selectDose(dose)"
+      :class="[
+        'px-4 py-2 rounded-md font-medium transition-colors duration-200',
+        selectedDose === dose
+          ? 'bg-teal-500 text-white'
+          : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-100',
+      ]"
+    >
+      {{ dose }}
+    </button>
+  </div>
 </template>
