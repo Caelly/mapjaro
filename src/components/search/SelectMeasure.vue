@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
 
-const selectedDose = ref('2,5 mg')
+const selectedDose = ref('')
 const doses = ['2,5 mg', '5 mg', '7,5 mg']
 
 const formattedDose = computed(() => {

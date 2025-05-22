@@ -1,14 +1,16 @@
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, computed } from 'vue'
 
 const props = defineProps({
-  dose: String, // format : "2-5", "5", etc.
+  dose: String, // ex : '2-5', '5', '7-5'
+  department: String, // ex : '42'
 })
 
-const items = ref([])
+const rawItems = ref([])
 const isLoading = ref(false)
 const error = ref(null)
 
+// Chargement des données en fonction de la dose
 watch(
   () => props.dose,
   async (newDose) => {
@@ -16,25 +18,31 @@ watch(
 
     isLoading.value = true
     error.value = null
+    rawItems.value = []
 
     try {
       const data = await import(`@/data/mounjaro-${newDose}.json`)
-      items.value = data.default
+      rawItems.value = data.default
     } catch (err) {
       console.error('Erreur de chargement JSON :', err)
-      error.value = `Données introuvables pour la dose ${newDose} mg.`
-      items.value = []
+      error.value = `Données introuvables pour la dose ${newDose}`
     } finally {
       isLoading.value = false
     }
   },
   { immediate: true },
 )
+
+// Filtrage par département
+const filteredItems = computed(() => {
+  if (!props.department) return rawItems.value
+  return rawItems.value.filter((pharmacy) => pharmacy.postal_code?.startsWith(props.department))
+})
 </script>
 
 <template>
   <div class="mt-6">
-    <p class="text-lg font-medium text-gray-800 mb-3">Résultats ({{ items.length }})</p>
+    <p class="text-lg font-medium text-gray-800 mb-3">Résultats ({{ filteredItems.length }})</p>
 
     <div v-if="isLoading" class="text-gray-500">Chargement…</div>
     <div v-else-if="error" class="text-red-500">{{ error }}</div>
@@ -62,7 +70,7 @@ watch(
         </thead>
         <tbody class="bg-white divide-y divide-gray-200">
           <tr
-            v-for="(pharmacy, index) in items"
+            v-for="(pharmacy, index) in filteredItems"
             :key="index"
             :class="index < 2 ? 'bg-emerald-50' : ''"
           >

@@ -1,18 +1,21 @@
 <template>
   <div class="p-4">
-    <SelectMeasure @update:formattedDose="handleDose" />
-    <InfoTable v-if="selectedDose" :dose="selectedDose" />
+    <SearchLocation @update:selectedDepartment="department = $event" />
+    <SelectMeasure @update:formattedDose="dose = $event" />
+    <InfoTable :dose="dose" :department="department" />
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import SearchLocation from './components/search/SearchLocation.vue'
 import SelectMeasure from './components/search/SelectMeasure.vue'
 import InfoTable from './components/InfoTable.vue'
 
-const selectedDose = ref('')
+const department = ref('')
+const dose = ref('')
 
 function handleDose(dose) {
-  selectedDose.value = dose // ex: "2-5"
+  selectedDose.value = dose
 }
 </script>
