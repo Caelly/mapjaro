@@ -15,7 +15,7 @@
       Envoyez-moi un message ! @oraxya sur Instagram, Facebook contact@oraxya.com par mail
     </p>
     <p class="inline-flex items-center text-lg text-blue-600 dark:text-blue-500">
-      Dernière mise à jour : 20.05.2025 | Ajout de nouvelles informations (Rhône / IDF)
+      Dernière mise à jour : 26.05.2025 | Ajout de nouvelles informations (Île de France)
     </p>
   </div>
 </template>

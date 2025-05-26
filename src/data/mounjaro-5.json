@@ -40,5 +40,53 @@
     "city": "Mably",
     "price": 350,
     "last_update": "22/05/2025"
+  },
+  {
+    "name": "Citypharma",
+    "address": "26 rue du Four",
+    "postal_code": "75006",
+    "city": "Paris",
+    "price": 243,
+    "last_update": "26/05/2025"
+  },
+  {
+    "name": "Pharmacie Opéra Garnier - Choiseul",
+    "address": "23 rue de Choiseul",
+    "postal_code": "75002",
+    "city": "Paris",
+    "price": 250,
+    "last_update": "26/05/2025"
+  },
+  {
+    "name": "Pharmacie de Ratarieux",
+    "address": "128 Avenue Albert Raimond",
+    "postal_code": "42270",
+    "city": "St-Priest-en-Jarez",
+    "price": 278,
+    "last_update": "26/05/2025"
+  },
+  {
+    "name": "Pharmacie de l'Eglise",
+    "address": "65 Place de l'Eglise",
+    "postal_code": "74540",
+    "city": "Saint-Félix",
+    "price": 310,
+    "last_update": "26/05/2025"
+  },
+  {
+    "name": "Pharmacie Lafayette Pasteur",
+    "address": "44 Allée d'Iléna",
+    "postal_code": "11000",
+    "city": "Carcassonne",
+    "price": 258,
+    "last_update": "26/05/2025"
+  },
+  {
+    "name": "Pharmacie de La Gare",
+    "address": "5 Place de la Révolution",
+    "postal_code": "77680",
+    "city": "Roissy-en-Brie",
+    "price": 250,
+    "last_update": "26/05/2025"
   }
 ]

@@ -6,5 +6,45 @@
     "city": "Lyon",
     "price": 275,
     "last_update": "22/05/2025"
+  },
+  {
+    "name": "Citypharma",
+    "address": "26 rue du Four",
+    "postal_code": "75006",
+    "city": "Paris",
+    "price": 199,
+    "last_update": "26/05/2025"
+  },
+  {
+    "name": "Grande Pharmacie de l'Europe",
+    "address": "86 boulevard Alexandre de Fraissinette",
+    "postal_code": "42100",
+    "city": "St Etienne",
+    "price": 209,
+    "last_update": "26/05/2025"
+  },
+  {
+    "name": "Pharmacie Opéra Garnier - Choiseul",
+    "address": "23 rue de Choiseul",
+    "postal_code": "75002",
+    "city": "Paris",
+    "price": 189,
+    "last_update": "26/05/2025"
+  },
+  {
+    "name": "Pharmacie Lafayette Pasteur",
+    "address": "44 Allée d'Iléna",
+    "postal_code": "11000",
+    "city": "Carcassonne",
+    "price": 198,
+    "last_update": "26/05/2025"
+  },
+  {
+    "name": "Pharmacie de La Gare",
+    "address": "5 Place de la Révolution",
+    "postal_code": "77680",
+    "city": "Roissy-en-Brie",
+    "price": 190,
+    "last_update": "26/05/2025"
   }
 ]
