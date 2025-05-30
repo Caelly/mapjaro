@@ -1,5 +1,5 @@
 <template>
-  <div class="px-6 py-4 bg-gray-50 border-t border-gray-200">
+  <div class="px-6 py-4 border-t border-gray-200">
     <p class="text-xs text-gray-500 font-bold text-center">
       Cette carte est alimentée par les informations fournies par la communauté.
     </p>
@@ -41,6 +41,7 @@
           </button>
         </div>
 
+        <!-- TODO : EDITER LES CGU-->
         <div class="p-6">
           <div class="max-w-none">
             <div class="py-6 border-b border-gray-100">

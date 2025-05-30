@@ -34,7 +34,7 @@
     <!-- Dosage -->
     <div class="pt-6">
       <label class="flex items-center text-xl font-bold mb-2">Dosage </label>
-      <div class="flex space-x-2">
+      <div class="flex space-x-4">
         <button
           v-for="dose in dosages"
           :key="dose"
@@ -74,7 +74,6 @@ export default {
     const showSuggestions = ref(false)
     const selectedDosage = ref(props.dosage)
 
-    // Liste des départements français
     const departments = [
       { code: '01', name: 'Ain' },
       { code: '02', name: 'Aisne' },

@@ -10,7 +10,6 @@
     <!-- END HEADER -->
 
     <main class="max-w-7xl">
-      <!-- LEFT SIDE -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div class="space-y-6">
           <!-- Filters -->
@@ -21,14 +20,18 @@
               @filter-change="handleFilterChange"
             />
           </div>
+          <!-- MAP -->
+          <div class="bg-white rounded-lg shadow">
+            <PharmacyMap :pharmacies="filteredPharmacies" />
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow">
+          <PharmacyTable :pharmacies="filteredPharmacies" :loading="loading" />
         </div>
       </div>
-      <!-- END LEFT SIDE -->
-      <div class="bg-white rounded-lg shadow">
-        <PharmacyTable :pharmacies="filteredPharmacies" :loading="loading" />
-      </div>
     </main>
-    <Footer />
+
+    <Footer class="pt-8" />
   </div>
 </template>
 
@@ -39,7 +42,7 @@ import PharmacyTable from './components/PharmacyTable.vue'
 import Header from './components/layout/Header.vue'
 import ContributeButton from './components/layout/ContributeButton.vue'
 import Footer from './components/layout/Footer.vue'
-//import MapComponent from './components/MapComponent.vue'
+import PharmacyMap from './components/PharmacyMap.vue'
 
 // Import des données JSON
 import mounjaro25Data from './data/mounjaro-2-5.json'
@@ -51,14 +54,14 @@ export default {
   components: {
     SearchFilters,
     PharmacyTable,
-    //MapComponent,
+    PharmacyMap,
     ContributeButton,
     Header,
     Footer,
   },
   setup() {
     const selectedDepartment = ref('')
-    const selectedDosage = ref('2.5')
+    const selectedDosage = ref('')
     const selectedPharmacy = ref(null)
     const showContributeModal = ref(false)
     const loading = ref(false)
